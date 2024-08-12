@@ -1,0 +1,9 @@
+
+
+/* General app styling */
+.App {
+  font-family: 'Courier New', Courier, monospace; /* Terminal-like font */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
