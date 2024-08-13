@@ -1,6 +1,6 @@
 
 .navbar {
-  background-color: #f49595; /* Dark background for the navbar */
+  background-color: #55996f; /* Dark background for the navbar */
   color: #F8EDEB; /* White text */
   padding: 2px;
   display: flex;
@@ -13,7 +13,7 @@
   font-size: 1.8rem;
   align-self: auto;
   margin: 0;
-  color: #F8EDEB; /* color for the brand name */
+  color: #faf8eb; /* color for the brand name */
   font-family: 'Courier New', Courier, monospace; /* Terminal-like font */
 }
 
@@ -29,7 +29,7 @@
 }
 
 .navbar-links a {
-  color: #F8EDEB; /* White text for links */
+  color: #faf8eb; /* White text for links */
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.3s;

@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #FCD5CE; /* Terminal background color */
+  background-color: #faf8eb; /* Terminal background color */
   color: #F49595; /* Terminal text color */
   font-family: 'Courier New', Courier, monospace; /* Terminal-like font */
   text-align: center;
@@ -30,7 +30,7 @@ p {
 
 .home-button {
   background-color: #333; /* Button background color */
-  color: #7BCCB5; /* Button text color */
+  color: #55996f; /* Button text color */
   border: none;
   padding: 0.5rem 1.5rem;
   font-size: 1.2rem;
