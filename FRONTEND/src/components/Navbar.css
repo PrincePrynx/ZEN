@@ -2,7 +2,7 @@
 .navbar {
   background-color: #55996f; /* Dark background for the navbar */
   color: #F8EDEB; /* White text */
-  padding: 2px;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,7 +12,7 @@
 .navbar-brand h1 {
   font-size: 1.8rem;
   align-self: auto;
-  margin: 0;
+  margin: 1px;
   color: #faf8eb; /* color for the brand name */
   font-family: 'Courier New', Courier, monospace; /* Terminal-like font */
 }
@@ -38,22 +38,3 @@
 .navbar-links a:hover {
   color: #FCD5CE; /*  color on hover */
 }
-
-/* Responsive styling */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: row;
-    align-items: first baseline;
-  }
-
-  .navbar-links {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .navbar-links li {
-    margin: 0.5rem 600px;
-  }
-} 
-
-
