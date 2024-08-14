@@ -4,6 +4,7 @@
 }
 
 .motivational-message h1 {
+  font-family: monospace;
   font-size: 2rem;
   color: #333;
   margin-bottom: 20px;
@@ -11,6 +12,7 @@
 
 .button-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   gap: 10px;
 }
