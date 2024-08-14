@@ -12,7 +12,8 @@
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2px;
   margin-bottom: 1rem;
 }
 
@@ -40,12 +41,3 @@ p {
   transition: background-color 0.3s, color 0.3s;
 }
 
-.home-button:hover {
-  background-color: #555; /* Button background color on hover */
-  color: #fff; /* Button text color on hover */
-}
-
-.home-button:focus {
-  outline: none; /* Remove default focus outline */
-  box-shadow: 0 0 0 3px rgba(0, 255, 0, 0.5); /* Custom focus ring */
-}

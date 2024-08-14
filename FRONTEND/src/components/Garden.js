@@ -1,21 +1,22 @@
 import React from 'react';
+import './Garden.css';
 
-function Garden({ moods }) {
-  return (
-    <div className="garden">
-      <h1>My Garden</h1>
-      <div className="garden-container">
-        {moods.length === 0 ? (
-          <p>No moods tracked yet.</p>
-        ) : (
-          moods.map((mood, index) => (
-            <div key={index} className="plant">
-              {mood}
+function Garden({ plants }) {
+    return (
+        <div className="garden">
+            <h1>Your Garden</h1>
+            <div className="plants-container">
+                {plants.map((plant, index) => (
+                    <span key={index} className="plant">
+                        {plant}
+                    </span>
+                ))}
             </div>
-          ))
-        )}
-      </div>
-    </div>
-  );
+            <p>
+                <a href="/">Back to Home</a>
+            </p>
+        </div>
+    );
 }
 
+export default Garden;

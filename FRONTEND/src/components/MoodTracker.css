@@ -1,64 +1,67 @@
-/* .mood-tracker {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .mood-tracker select {
-    padding: 10px;
-    font-size: 16px;
-  }
-  
-  .mood-tracker button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .mood-display {
-    margin-top: 20px;
-  }
-  
-  .mood-plants {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  .mood-plant {
-    font-size: 24px;
-  }
- 
-  input[type="text"] {
-    padding: 8px;
-    font-size: 16px;
-    margin-right: 10px;
-  }
-  
-  button {
-    padding: 8px 16px;
-    font-size: 16px;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  li {
-    padding: 5px;
-  } */
+.mood-tracker {
+  text-align: center;
+  padding: 20px;
+  transition: background-color 0.5s ease; /* Smooth background transition */
+}
 
-  .mood-tracker {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-color: #FCD5CE;
-    color: #7BCCB5;
-    padding: 20px;
-  }
-  
-  
+.mood-tracker h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
 
+.mood-tracker form {
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.mood-tracker select {
+  font-size: 1.2em;
+  margin-left: 10px;
+}
+
+.mood-tracker button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.mood-tracker button:hover {
+  background-color: #0056b3;
+}
+
+.plant-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
+.mood-tracker {
+  text-align: center;
+  padding: 20px;
+}
+
+.mood-options {
+  margin-top: 20px;
+}
+
+.mood-options button {
+  font-size: 1.5rem;
+  margin: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.mood-options a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #333;
+  margin-top: 20px;
+  display: inline-block;
+}
