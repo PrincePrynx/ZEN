@@ -1,60 +1,42 @@
+/* Ensure the container covers the full viewport */
 .mood-tracker {
-  text-align: center;
-  padding: 20px;
-  transition: background-color 0.5s ease; /* Smooth background transition */
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  margin: 0;
+  padding: 20px; /* Add padding for better layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.5s ease; /* Smooth transition for background color change */
 }
 
-.mood-tracker h1 {
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-.mood-tracker form {
-  display: inline-block;
-  text-align: left;
-  margin-bottom: 20px;
-}
-
-.mood-tracker select {
-  font-size: 1.2em;
-  margin-left: 10px;
-}
-
-.mood-tracker button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 1em;
-  background-color: #55996f;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.mood-tracker button:hover {
-  background-color: #0056b3;
-}
-
-.mood-tracker {
-  text-align: center;
-  padding: 20px;
-}
-
+/* Style for mood options buttons */
 .mood-options {
-  margin-top: 20px;
+  margin: 20px 0;
 }
 
 .mood-options button {
-  font-size: 1.5rem;
-  margin: 10px;
+  margin: 0 10px;
   padding: 10px 20px;
+  font-size: 16px;
   cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.mood-options a {
-  font-size: 1.2rem;
+.mood-options button:hover {
+  opacity: 0.8;
+}
+
+/* Style for the link to view garden */
+.mood-tracker a {
   text-decoration: none;
-  color: #333;
-  margin-top: 20px;
-  display: inline-block;
+  color: #007bff;
+  font-size: 18px;
+}
+
+.mood-tracker a:hover {
+  text-decoration: underline;
 }

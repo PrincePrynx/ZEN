@@ -1,106 +1,15 @@
-.plants-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.plant {
-  font-size: 2rem;
-}
-
-
-.plant {
-  font-size: 3em;
-  margin: 0 10px;
-}
-
-.happy-plant {
-  animation: grow-happy 1s ease-in-out;
-}
-
-.sad-plant {
-  animation: grow-sad 1s ease-in-out;
-}
-
-.angry-plant {
-  animation: grow-angry 1s ease-in-out;
-}
-
-.relaxed-plant {
-  animation: grow-relaxed 1s ease-in-out;
-}
-
-.anxious-plant {
-  animation: grow-anxious 1s ease-in-out;
-}
-
-@keyframes grow-happy {
-  from { transform: scale(0.5); }
-  to { transform: scale(1); }
-}
-
-@keyframes grow-sad {
-  from { transform: scale(0.5); }
-  to { transform: scale(1); }
-}
-
-@keyframes grow-angry {
-  from { transform: scale(0.5); }
-  to { transform: scale(1); }
-}
-
-@keyframes grow-relaxed {
-  from { transform: scale(0.5); }
-  to { transform: scale(1); }
-}
-
-@keyframes grow-anxious {
-  from { transform: scale(0.5); }
-  to { transform: scale(1); }
-}
-
-
 .garden {
   padding: 20px;
-  background-color: #f0f8ff; /* Light background color for the garden */
   text-align: center;
-  font-family: Arial, sans-serif;
-  color: #333; /* Dark text color for better readability */
-}
-
-.garden h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #4caf50; /* Green color for the heading */
 }
 
 .plants-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 10px; /* Space between plants */
-  margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .plant {
-  font-size: 2rem;
-  padding: 10px;
-  border: 2px solid #4caf50; /* Green border around each plant */
-  border-radius: 5px; /* Rounded corners for the border */
-  background-color: #ffffff; /* White background for each plant */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a lifted effect */
-}
-
-.garden p {
-  margin-top: 20px;
-}
-
-.garden a {
-  color: #4caf50; /* Matching link color with heading */
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.garden a:hover {
-  text-decoration: underline;
+  font-size: 50px;
+  margin: 10px;
 }

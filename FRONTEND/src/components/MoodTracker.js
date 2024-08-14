@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import './MoodTracker.css';
 
-function MoodTracker({ addMood, addPlant }) {
+function MoodTracker({ addPlant }) {
     const [mood, setMood] = useState('');
 
     const handleMoodSelect = (selectedMood, plant) => {
         setMood(selectedMood);
-        addMood(selectedMood);
-        addPlant(plant);
+        addPlant(plant); // This adds the plant to the garden
     };
 
     const getBackgroundColor = () => {
@@ -28,7 +27,6 @@ function MoodTracker({ addMood, addPlant }) {
     return (
         <div className="mood-tracker" style={{ backgroundColor: getBackgroundColor() }}>
             <h1>Mood Tracker</h1>
-            <p>how are you feeling?</p>
             <div className="mood-options">
                 <button onClick={() => handleMoodSelect('happy', '🌻')}>Happy</button>
                 <button onClick={() => handleMoodSelect('sad', '🌵')}>Sad</button>
