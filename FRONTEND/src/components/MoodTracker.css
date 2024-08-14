@@ -35,13 +35,6 @@
   background-color: #0056b3;
 }
 
-.plant-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-
 .mood-tracker {
   text-align: center;
   padding: 20px;
