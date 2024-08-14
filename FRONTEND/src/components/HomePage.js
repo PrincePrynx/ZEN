@@ -8,7 +8,7 @@ function HomePage() {
 
   return (
     <div className="home-page">
-      <h1>Welcome to ZEN</h1>
+      <h1>WELCOME TO ZEN</h1>
       <p>Select an option to get started:</p>
       <div className="button-container">
         <Link to="/thoughts-villa">
