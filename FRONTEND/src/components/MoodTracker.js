@@ -26,7 +26,8 @@ function MoodTracker({ addPlant }) {
 
     return (
         <div className="mood-tracker" style={{ backgroundColor: getBackgroundColor() }}>
-            <h1>Mood Tracker</h1>
+            <h1>MOOD TRACKER</h1>
+            <p>how are you feeling at the moment?</p>
             <div className="mood-options">
                 <button onClick={() => handleMoodSelect('happy', '🌻')}>Happy</button>
                 <button onClick={() => handleMoodSelect('sad', '🌵')}>Sad</button>

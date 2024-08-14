@@ -1,3 +1,20 @@
+/* Header styling */
+.mood-tracker h1 {
+  font-size: 2.5em;
+  font-family: Courier;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+
+/* General text styling */
+.mood-tracker p {
+  font-size: 1.2em;
+  font-family: monospace;
+  color: #555;
+}
+
+
 /* Ensure the container covers the full viewport */
 .mood-tracker {
   height: 100vh; /* Full viewport height */
@@ -33,7 +50,7 @@
 /* Style for the link to view garden */
 .mood-tracker a {
   text-decoration: none;
-  color: #007bff;
+  color: #e44d54;
   font-size: 18px;
 }
 
