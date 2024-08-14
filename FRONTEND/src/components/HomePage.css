@@ -29,15 +29,5 @@ p {
   gap: 1rem;
 }
 
-.home-button {
-  background-color: #333; /* Button background color */
-  color: #55996f; /* Button text color */
-  border: none;
-  padding: 0.5rem 1.5rem;
-  font-size: 1.2rem;
-  font-family: 'Courier New', Courier, monospace; /* Terminal-like font */
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s;
-}
+
 
