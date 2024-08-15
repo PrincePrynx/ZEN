@@ -1,0 +1,83 @@
+/* Main container */
+.zen-animation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #55996f;
+  position: relative;
+}
+
+/* Circle background with reduced opacity */
+.circle {
+  width: 400px;
+  height: 400px;
+  background-color: #faf8eb;
+  border-radius: 50%;
+  opacity: 0.4; /* Adjust this value to reduce opacity */
+  transform: scale(10); /* Start by covering the entire screen */
+  animation: zoomOut 0.6s ease-out forwards;
+}
+
+/* Zen text with burst animation in a separate div */
+.zen-text {
+
+  font-size: 300px;
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: bold;
+  color: #faf8eb;
+  position: absolute;
+  animation: burst 0.6s ease-out forwards; /* Burst animation */
+}
+
+/* Slogan text with ascend and fade-in animation */
+.zen-animation .slogan {
+  font-size: 20px;
+  color: #faf8eb;
+  position: absolute;
+  bottom: 50px;
+  animation: ascendFadeIn 1s ease-out 1.5s forwards; /* Ascend and fade-in */
+  opacity: 0;
+  transform: translateY(90px); /* Start slightly lower */
+}
+
+/* Zoom-out animation for the circle */
+@keyframes zoomOut {
+  0% {
+    transform: scale(10); /* Start fully zoomed out */
+  }
+  100% {
+    transform: scale(1); /* Zoom into the center */
+  }
+}
+
+/* Burst animation for the Zen text */
+@keyframes burst {
+  0% {
+    transform: scale(10); /* Start fully zoomed out */
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1); /* End at normal size */
+    opacity: 1;
+  }
+}
+
+/* Ascend and fade-in animation for the slogan */
+@keyframes ascendFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Start lower */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at the original position */
+  }
+}
