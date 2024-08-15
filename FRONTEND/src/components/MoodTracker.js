@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './MoodTracker.css';
 
-function MoodTracker({ addPlant }) {
+function MoodTracker({ addPlant, moodCount }) {
     const [mood, setMood] = useState('');
+    const navigate = useNavigate();
 
     const handleMoodSelect = (selectedMood, plant) => {
         setMood(selectedMood);
-        addPlant(plant); // This adds the plant to the garden
+        addPlant(plant, selectedMood); // Add both plant and mood to the garden
     };
 
     const getBackgroundColor = () => {
@@ -24,19 +26,27 @@ function MoodTracker({ addPlant }) {
         }
     };
 
+    const canViewGarden = Object.values(moodCount).reduce((total, count) => total + count, 0) > 4;
+
     return (
         <div className="mood-tracker" style={{ backgroundColor: getBackgroundColor() }}>
             <h1>MOOD TRACKER</h1>
-            <p>how are you feeling at the moment?</p>
+            <p>How are you feeling at the moment?</p>
             <div className="mood-options">
                 <button onClick={() => handleMoodSelect('happy', '🌻')}>Happy</button>
                 <button onClick={() => handleMoodSelect('sad', '🌵')}>Sad</button>
                 <button onClick={() => handleMoodSelect('angry', '🌺')}>Angry</button>
                 <button onClick={() => handleMoodSelect('relaxed', '🍀')}>Relaxed</button>
             </div>
-            <p>
-                <a href="/garden">View Your Garden</a>
-            </p>
+            <div className="view-garden">
+                <button 
+                    onClick={() => navigate('/garden')}
+                    disabled={!canViewGarden}
+                >
+                    View Your Garden
+                </button>
+                {!canViewGarden && <p className="mood-warning">Make at least 5 mood entries to view your garden.</p>}
+            </div>
         </div>
     );
 }

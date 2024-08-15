@@ -1,8 +1,7 @@
 import React from 'react';
 import './Garden.css';
 
-function Garden({ plants }) {
-    // console.log('Plants in Garden:', plants); // Check if plants are received by the Garden component
+function Garden({ plants, moodMessage }) {
     return (
         <div className="garden">
             <h1>Your Garden</h1>
@@ -13,6 +12,7 @@ function Garden({ plants }) {
                     </span>
                 ))}
             </div>
+            <p className="mood-message">{moodMessage}</p>
             <p>
                 <a href="/">Back to Home</a>
             </p>

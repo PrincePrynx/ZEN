@@ -6,14 +6,12 @@
   color: #444;
 }
 
-
 /* General text styling */
 .mood-tracker p {
   font-size: 1.2em;
   font-family: monospace;
   color: #555;
 }
-
 
 /* Ensure the container covers the full viewport */
 .mood-tracker {
@@ -47,13 +45,32 @@
   opacity: 0.8;
 }
 
-/* Style for the link to view garden */
-.mood-tracker a {
-  text-decoration: none;
-  color: #e44d54;
-  font-size: 18px;
+/* Style for the view garden button */
+.view-garden {
+  text-align: center;
 }
 
-.mood-tracker a:hover {
-  text-decoration: underline;
+.view-garden button {
+  margin-top: 100px;
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #55996f;
+  color: white;
+  transition: background-color 0.3s ease;
 }
+
+.view-garden button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Styling for the warning message
+.mood-warning {
+  margin-top: 10px;
+  font-size: 10px;
+  color: #e44d54;
+  text-align: center;
+} */
