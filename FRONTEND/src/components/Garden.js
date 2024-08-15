@@ -2,6 +2,7 @@ import React from 'react';
 import './Garden.css';
 
 function Garden({ plants }) {
+    console.log('Plants in Garden:', plants); // Check if plants are received by the Garden component
     return (
         <div className="garden">
             <h1>Your Garden</h1>
