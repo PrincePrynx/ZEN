@@ -5,7 +5,7 @@ function ZenAnimation({ onAnimationEnd }) {
     useEffect(() => {
         const timer = setTimeout(() => {
             onAnimationEnd();
-        }, 20000); // Adjust the duration to match the length of your animation
+        }, 30000); // Adjust the duration to match the length of your animation
 
         return () => clearTimeout(timer);
     }, [onAnimationEnd]);
