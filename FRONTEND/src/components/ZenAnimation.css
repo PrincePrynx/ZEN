@@ -15,49 +15,56 @@
   height: 400px;
   background-color: #faf8eb;
   border-radius: 50%;
-  opacity: 0.4; /* Adjust this value to reduce opacity */
-  transform: scale(10); /* Start by covering the entire screen */
+  opacity: 0.4;
+  transform: scale(10);
   animation: zoomOut 0.6s ease-out forwards;
 }
 
-/* Zen text with burst animation in a separate div */
+/* Zen text with burst animation for individual letters */
 .zen-text {
-
-  font-size: 300px;
-  font-family: "Lilita One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-weight: bold;
-  color: #faf8eb;
+  display: flex;
   position: absolute;
-  animation: burst 0.6s ease-out forwards; /* Burst animation */
 }
 
-/* Slogan text with ascend and fade-in animation */
-.zen-animation .slogan {
-  font-size: 20px;
+.letter {
+  font-size: 300px;
+  font-family: "Lilita One", sans-serif;
+  font-weight: bold;
   color: #faf8eb;
+  transform: scale(0); /* Start small */
+  animation: burst 1s ease-out forwards; /* Burst animation */
+}
+
+/* Slogan text container with individual word animation */
+.slogan {
   position: absolute;
   bottom: 50px;
-  animation: ascendFadeIn 1s ease-out 1.5s forwards; /* Ascend and fade-in */
+  display: flex;
+  gap: 5px;
+}
+
+.word {
+  font-size: 20px;
+  color: #faf8eb;
   opacity: 0;
-  transform: translateY(90px); /* Start slightly lower */
+  transform: translateY(90px);
+  animation: ascendFadeIn 0.3s ease-out forwards;
 }
 
 /* Zoom-out animation for the circle */
 @keyframes zoomOut {
   0% {
-    transform: scale(10); /* Start fully zoomed out */
+    transform: scale(10);
   }
   100% {
-    transform: scale(1); /* Zoom into the center */
+    transform: scale(1);
   }
 }
 
-/* Burst animation for the Zen text */
+/* Burst animation for the letters in the Zen text */
 @keyframes burst {
   0% {
-    transform: scale(10); /* Start fully zoomed out */
+    transform: scale(0); /* Start small */
     opacity: 0;
   }
   50% {
@@ -70,14 +77,14 @@
   }
 }
 
-/* Ascend and fade-in animation for the slogan */
+/* Ascend and fade-in animation for each word in the slogan */
 @keyframes ascendFadeIn {
   0% {
     opacity: 0;
-    transform: translateY(20px); /* Start lower */
+    transform: translateY(20px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0); /* End at the original position */
+    transform: translateY(0);
   }
 }
