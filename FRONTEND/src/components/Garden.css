@@ -1,22 +1,68 @@
+/* Garden.css */
+
 .garden {
   padding: 20px;
-  text-align: center;
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  height: 100vh; /* Full viewport height to center the content vertically */
+  background-color: #f0f0f0; /* Optional: Light background color */
+  position: relative; /* To position the mood message correctly */
 }
 
 .plants-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  position: relative;
+  width: 300px; /* Container width */
+  height: 300px; /* Container height */
+  margin-bottom: 20px; /* Space between the circle and the mood message */
 }
 
 .plant {
-  font-size: 50px;
-  margin: 10px;
+  position: absolute;
+  font-size: 40px; /* Adjust size as needed */
+  transform-origin: center;
+  cursor: pointer; /* Indicates that the emoji is interactive */
+  transition: transform 0.3s; /* Smooth scaling effect */
 }
 
+.plant:hover {
+  transform: scale(1.2); /* Slightly enlarge the emoji on hover */
+}
+
+.plant::after {
+  content: attr(data-emotion);
+  position: absolute;
+  bottom: 100%; /* Position above the emoji */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 4px;
+  white-space: nowrap; /* Prevent text from wrapping */
+  visibility: hidden; /* Hide by default */
+  opacity: 0;
+  transition: opacity 0.3s; /* Smooth fade-in effect */
+  font-size: 0.9em;
+}
+
+.plant:hover::after {
+  visibility: visible; /* Show on hover */
+  opacity: 1; /* Fully opaque on hover */
+}
+
+
 .mood-message {
-  font-size: 1.2em;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5em; /* Larger font size for visibility */
   color: #333;
-  margin-top: 20px;
-  text-align: center;
+  margin-top: 200px; /* Space above the mood message */
+}
+
+a {
+  font-family: monospace;
+  margin-top: 20px; /* Space above the link */
+  text-decoration: none;
+  color: #007bff; /* Adjust link color */
 }

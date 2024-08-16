@@ -67,10 +67,11 @@
   cursor: not-allowed;
 }
 
-/* Styling for the warning message
-.mood-warning {
+/* Styling for the warning message */
+.mood-warning p {
+  font-family: Courier;
   margin-top: 10px;
-  font-size: 10px;
+  font-size: 5px;
   color: #e44d54;
   text-align: center;
-} */
+}
