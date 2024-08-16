@@ -1,68 +1,87 @@
-/* Garden.css */
-
 .garden {
   padding: 20px;
   display: flex;
-  flex-direction: column; /* Stack content vertically */
-  align-items: center; /* Center content horizontally */
-  justify-content: center; /* Center content vertically */
-  height: 100vh; /* Full viewport height to center the content vertically */
-  background-color: #f0f0f0; /* Optional: Light background color */
-  position: relative; /* To position the mood message correctly */
-}
-
-.plants-container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0;
   position: relative;
-  width: 300px; /* Container width */
-  height: 300px; /* Container height */
-  margin-bottom: 20px; /* Space between the circle and the mood message */
 }
 
-.plant {
+.garden-plants-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.garden-plant {
   position: absolute;
-  font-size: 40px; /* Adjust size as needed */
+  font-size: 40px;
   transform-origin: center;
-  cursor: pointer; /* Indicates that the emoji is interactive */
-  transition: transform 0.3s; /* Smooth scaling effect */
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.plant:hover {
-  transform: scale(1.2); /* Slightly enlarge the emoji on hover */
+.garden-plant:hover {
+  transform: scale(1.5);
+  color: #4CAF50;
 }
 
-.plant::after {
-  content: attr(data-emotion);
-  position: absolute;
-  bottom: 100%; /* Position above the emoji */
-  left: 50%;
-  transform: translateX(-50%);
+/* Tooltip styling */
+.garden-plant:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(-10px);
+}
+
+.tooltip {
+  visibility: hidden;
+  opacity: 0;
   background-color: #333;
   color: #fff;
+  text-align: center;
+  border-radius: 5px;
   padding: 5px;
-  border-radius: 4px;
-  white-space: nowrap; /* Prevent text from wrapping */
-  visibility: hidden; /* Hide by default */
-  opacity: 0;
-  transition: opacity 0.3s; /* Smooth fade-in effect */
-  font-size: 0.9em;
+  position: absolute;
+  z-index: 1;
+  width: 80px;
+  bottom: 125%; /* Position above the plant */
+  left: 50%;
+  margin-left: -40px; /* Center the tooltip */
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  font-size: 10px;
 }
 
-.plant:hover::after {
-  visibility: visible; /* Show on hover */
-  opacity: 1; /* Fully opaque on hover */
+.tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%; /* Bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent; /* Arrow pointing down */
 }
 
-
-.mood-message {
+.garden-mood-message {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 1.5em; /* Larger font size for visibility */
+  font-size: 1.5em;
   color: #333;
-  margin-top: 200px; /* Space above the mood message */
+  margin-top: 200px;
+  text-align: center;
 }
 
-a {
+.garden-mood-header {
   font-family: monospace;
-  margin-top: 20px; /* Space above the link */
+  margin-top: 0;
   text-decoration: none;
-  color: #007bff; /* Adjust link color */
+  color: #333;
+}
+.garden-link {
+  font-family: monospace;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #007bff;
 }
