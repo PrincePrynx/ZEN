@@ -1,93 +1,113 @@
-/* ThoughtsBacklog.css */
-
+/* Main container for the thoughts backlog page */
 .thoughts-backlog {
   padding: 20px;
-  background-color: #faf8eb;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  font-family: 'Courier New', Courier, monospace;
+  color: #333;
+  background-color:#faf8eb;
+  min-height: 100vh;
 }
 
+/* Heading style */
 .thoughts-backlog h1 {
-  font-family: Courier;
-  font-size: 2rem; /* Adjust font size for visibility */
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #55996f;
   text-align: center;
-  margin-bottom: 20px; /* Adjust margin to space out from flashcards */
-  position: absolute;
-  top: 20px; /* Center the heading at the top of the page */
-  width: 100%;
-  left: 0;
 }
 
+/* Container for flashcards */
 .flashcard-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  margin-top: 80px; /* Space for heading */
+  padding: 150px;
 }
 
+/* Flashcard style */
 .flashcard {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 100px;
   background-color: #F49595;
-  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.flashcard-title {
-  font-family: monospace;
-  font-size: 1rem;
-  color: #faf8eb;
+  transition: transform 0.2s;
   text-align: center;
 }
 
 .flashcard:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
 }
 
-/* Modal Overlay for Quiz and Entry */
-.modal-overlay, .entry-screen {
+.flashcard-title {
+  font-size: 1.2em;
+  color: #faf8eb;
+}
+
+/* Modal overlay for quiz and entry screens */
+.modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
-.modal-content, .entry-content {
-  background: white;
+/* Modal content for quiz */
+.modal-content {
+  background-color: #fff;
   padding: 20px;
-  border-radius: 8px;
-  max-width: 500px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
   width: 100%;
 }
 
-.quiz-question {
-  margin-bottom: 2px;
-}
-
 .quiz-question label {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
   display: block;
-  margin-bottom: 5px;
 }
 
 .quiz-question input {
- 
-  width: 30%;
-  padding: 4px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 10px;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Entry content screen styling */
+.entry-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.entry-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+  text-align: left;
+  font-size: 1.2em;
+  color: #333;
 }

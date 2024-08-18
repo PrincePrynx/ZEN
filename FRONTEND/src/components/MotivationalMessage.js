@@ -25,7 +25,7 @@ function MotivationalMessage() {
           {message}
         </div>
         <div className="button-container">
-          <button onClick={() => navigate('/')}>Home</button>
+          {/* <button onClick={() => navigate('/')}>Home</button> */}
           <button onClick={() => navigate('/thoughts-backlog')}>View Backlog</button>
         </div>
       </div>

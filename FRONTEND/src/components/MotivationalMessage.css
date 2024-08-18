@@ -6,7 +6,7 @@
   align-items: center;
   height: 100vh; /* Full viewport height */
   background: #faf8eb;
-  margin: 0;
+  margin: 10px;
   position: relative; /* Ensure button container is positioned relative to this */
 }
 
