@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './HomePage.css';
@@ -10,7 +9,7 @@ function HomePage() {
     <div className="home-page">
       <h1>WELCOME TO ZEN</h1>
       <p>Select an option to get started:</p>
-      <div className="button-container">
+      <div className="home-button-container">
         <Link to="/thoughts-villa">
           <button className="home-button">Thoughts Villa</button>
         </Link>

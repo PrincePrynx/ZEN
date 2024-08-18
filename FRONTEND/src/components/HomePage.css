@@ -1,4 +1,4 @@
-
+/* HomePage.css */
 .home-page {
   display: flex;
   flex-direction: column;
@@ -11,23 +11,37 @@
   text-align: center;
 }
 
-h1 {
+.home-page h1 {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 20px;
+  font-size: 2rem; /* Adjust font size for visibility */
   margin-bottom: 1rem;
 }
 
-p {
+.home-page p {
   font-size: 1.2rem;
   color: #000;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 }
 
-.button-container {
+.home-button-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
+.home-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
-
+.home-button:hover {
+  background-color: #45a049;
+}

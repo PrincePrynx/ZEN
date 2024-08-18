@@ -19,11 +19,15 @@ function MotivationalMessage() {
   const message = getRandomMessage();
 
   return (
-    <div className="motivational-message">
-      <h1>{message}</h1>
-      <div className="button-container">
-        <button onClick={() => navigate('/')}>Home</button>
-        <button onClick={() => navigate('/thoughts-backlog')}>View Backlog</button>
+    <div className="motivational-message-container">
+      <div className="motivational-message">
+        <div className="typing-animation">
+          {message}
+        </div>
+        <div className="button-container">
+          <button onClick={() => navigate('/')}>Home</button>
+          <button onClick={() => navigate('/thoughts-backlog')}>View Backlog</button>
+        </div>
       </div>
     </div>
   );

@@ -1,0 +1,30 @@
+.about-page {
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto; /* Center the content */
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.about-page h1 {
+    font-size: 2.5em;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.about-page p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-page a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1em;
+}
+
+.about-page a:hover {
+    text-decoration: underline;
+}

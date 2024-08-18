@@ -39,7 +39,7 @@ function ThoughtsVilla({ addThought }) {
 
   return (
     <div className="thoughts-villa" style={{ backgroundColor }}>
-      <h1 className={explosion ? 'fade-out' : ''}>Thoughts Villa</h1>
+      {/* <h1 className={explosion ? 'fade-out' : ''}>Thoughts Villa</h1> */}
       <form onSubmit={handleThoughtSubmit}>
         <textarea
           value={thought}

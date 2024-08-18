@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import ThoughtsBacklog from './components/ThoughtsBacklog';
 import MotivationalMessage from './components/MotivationalMessage';
 import Garden from './components/Garden';
+import About from './About';
 import ZenAnimation from './components/ZenAnimation';
 function App() {
     const [thoughts, setThoughts] = useState([]);
@@ -70,6 +71,7 @@ function App() {
                   <Route path="/thoughts-backlog" element={<ThoughtsBacklog thoughts={thoughts} />} />
                   <Route path="/motivational-message" element={<MotivationalMessage />} />
                   <Route path="/garden" element={<Garden plants={plants} moodMessage={getMoodMessage()} />} />
+                  <Route path="/about" element={<About />} /> {/* Add route for About */}
                 </Routes>
               </div>
             </>

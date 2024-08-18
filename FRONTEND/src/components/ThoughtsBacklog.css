@@ -1,23 +1,93 @@
+/* ThoughtsBacklog.css */
+
 .thoughts-backlog {
-    padding: 20px;
-    
-  }
-  
-  .thoughts-backlog h1 {
-    font-size: 4rem;
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  
-  .thoughts-backlog ul {
-    list-style-type: none;
-    padding: 5px;
-  }
-  
-  .thoughts-backlog li {
-    background-color: #d27474;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-  }
+  padding: 20px;
+  background-color: #faf8eb;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.thoughts-backlog h1 {
+  font-family: Courier;
+  font-size: 2rem; /* Adjust font size for visibility */
+  text-align: center;
+  margin-bottom: 20px; /* Adjust margin to space out from flashcards */
+  position: absolute;
+  top: 20px; /* Center the heading at the top of the page */
+  width: 100%;
+  left: 0;
+}
+
+.flashcard-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 80px; /* Space for heading */
+}
+
+.flashcard {
+  width: 120px;
+  height: 120px;
+  background-color: #F49595;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.flashcard-title {
+  font-family: monospace;
+  font-size: 1rem;
+  color: #faf8eb;
+  text-align: center;
+}
+
+.flashcard:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal Overlay for Quiz and Entry */
+.modal-overlay, .entry-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content, .entry-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.quiz-question {
+  margin-bottom: 2px;
+}
+
+.quiz-question label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.quiz-question input {
  
+  width: 30%;
+  padding: 4px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
