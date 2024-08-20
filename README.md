@@ -13,7 +13,7 @@ Currently in its conceptual phase, the project aims to evolve into an ecosystem 
 - [Setup and Installation](#setup-and-installation)
 - [Running the App](#running-the-app)
 - [Secondary Future Improvements And Expansion](#secondary-future-improvements-and-expansion)
--[Future Primary Expansion Features](#future-primary-expansion-features)
+- [Future Primary Expansion Features](#future-primary-expansion-features)
 - [Conclusion](#conclusion)
 - [Author](#author)
 
