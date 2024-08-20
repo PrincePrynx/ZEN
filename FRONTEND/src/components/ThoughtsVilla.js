@@ -44,7 +44,7 @@ function ThoughtsVilla({ addThought }) {
         <textarea
           value={thought}
           onChange={handleThoughtChange}
-          placeholder="Type your thoughts here..."
+          placeholder="What's on your mind?"
           className={`thought-input ${explosion ? 'explode' : ''}`}
         ></textarea>
         <button type="submit" className={`submit-button ${explosion ? 'explode' : ''}`}>
