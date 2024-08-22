@@ -11,9 +11,17 @@
 
 .garden-plants-container {
   position: relative;
-  width: 300px;
-  height: 300px;
+  /* width: 300px;
+  height: 300px; */
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  width: 80%;
+  max-width: 600px;
+  height: 80%;
+  max-height: 600px;
 }
 
 .garden-plant {
@@ -84,4 +92,19 @@
   margin-top: 20px;
   text-decoration: none;
   color: #007bff;
+}
+
+@media (max-width: 600px) {
+  .garden {
+    padding: 1rem;
+  }
+
+  .garden-plants-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .garden-plant {
+    font-size: 30px;
+  }
 }

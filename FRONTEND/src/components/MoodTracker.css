@@ -75,3 +75,16 @@
   color: #e44d54;
   text-align: center;
 }
+
+
+
+@media (max-width: 600px) {
+  .mood-tracker-header {
+    font-size: 1.5rem;
+  }
+
+  .mood-tracker-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+}

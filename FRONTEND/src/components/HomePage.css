@@ -32,16 +32,29 @@
 }
 
 .home-button {
-  padding: 10px 20px;
+  padding: 1rem 2rem;
   font-size: 1rem;
   background-color: #4CAF50;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .home-button:hover {
   background-color: #45a049;
+}
+
+
+
+@media (max-width: 600px) {
+  .home-page h1 {
+    font-size: 1.5rem;
+  }
+
+  .home-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
 }

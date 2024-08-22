@@ -111,3 +111,14 @@
   font-size: 1.2em;
   color: #333;
 }
+
+@media (max-width: 600px) {
+  .thoughts-backlog {
+    padding: 1rem;
+  }
+
+  .thoughts-entry-button {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+}

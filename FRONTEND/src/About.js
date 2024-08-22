@@ -5,9 +5,9 @@ function About() {
     return (
         <div className="about-page">
             <h1>About ZEN</h1>
-            <p>ZEN is a mental health and well-being app designed to help you track your emotions, express your thoughts, and cultivate mindfulness through personalized features like the MoodTracker, Garden, and Thoughts Villa.</p>
-            <p>Our mission is to provide daily support and help you stay connected with your emotions, empowering you to live a balanced and fulfilling life.</p>
-            <p>Whether you are looking to reflect on your feelings, find inspiration, or simply take a moment for yourself, ZEN is here every step of the way.</p>
+            <p>Welcome to ZEN! We’re your go-to companion for mental health and well-being, here to help you navigate your emotions, express your thoughts, and nurture mindfulness in ways that feel just right for you. With personalized features like the Mood Tracker, Garden, and Thoughts Villa, you’ll find space to reflect, grow, and just be.</p>
+            <p>Our mission? It’s simple: to be by your side daily, helping you stay in tune with your emotions while empowering you to lead a more balanced, fulfilling life.</p>
+            <p>Whether you need a moment to pause and breathe, want to reflect on your day, or are searching for a little inspiration, ZEN is right here with you, every step of the way."</p>
             <p>
                 <a href="/">Back to Home</a>
             </p>
