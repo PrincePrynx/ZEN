@@ -56,14 +56,16 @@ function ThoughtsBacklog({ thoughts }) {
   };
 
   return (
-    <div className="thoughts-backlog">
-      <h1>YOUR THOUGHTS BACKLOG</h1>
+    <div className="thoughts-backlog" aria-labelledby="backlog-heading">
+      <h1 id="backlog-heading">YOUR THOUGHTS BACKLOG</h1>
       <div className="flashcard-container">
         {thoughts.map((thought, index) => (
           <div
             key={index}
             className="flashcard"
             onClick={() => handleCardClick(index)}
+            role="button"
+            aria-label={`View entry ${index + 1}`}
           >
             <div className="flashcard-title">
               ENTRY {index + 1}
@@ -74,26 +76,31 @@ function ThoughtsBacklog({ thoughts }) {
 
       {/* Math Quiz Modal */}
       {isQuizVisible && (
-        <div className="modal-overlay" onClick={handleOverlayClick}>
+        <div className="modal-overlay" onClick={handleOverlayClick} aria-hidden="true">
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <div className="quiz-question">
-              <label>{quiz.question}</label>
+              <label htmlFor="quiz-input">{quiz.question}</label>
               <input
+                id="quiz-input"
                 type="number"
                 value={userAnswer}
                 onChange={handleInputChange}
                 onKeyDown={handleKeyPress}
                 placeholder="Enter your answer"
                 autoFocus
+                aria-label="Quiz answer input"
               />
             </div>
+            <button onClick={handleQuizSubmit} aria-label="Submit quiz answer">
+              Submit
+            </button>
           </div>
         </div>
       )}
 
       {/* Entry Content Modal */}
       {showEntry && (
-        <div className="entry-screen" onClick={handleOverlayClick}>
+        <div className="entry-screen" onClick={handleOverlayClick} aria-hidden="true">
           <div className="entry-content" onClick={(e) => e.stopPropagation()}>
             {selectedEntry}
           </div>

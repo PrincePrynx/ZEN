@@ -1,4 +1,3 @@
-/* Ensure that styles only affect the MotivationalMessage component */
 .motivational-message-container {
   display: flex;
   flex-direction: column;
@@ -6,8 +5,8 @@
   align-items: center;
   height: 100vh; /* Full viewport height */
   background: #faf8eb;
-  margin: 10px;
-  position: relative; /* Ensure button container is positioned relative to this */
+  margin: 0; /* Remove extra margins */
+  position: relative; /* For absolute positioning of button-container */
 }
 
 .motivational-message {
@@ -16,25 +15,25 @@
   border: 1px solid #00ff00; /* Terminal border color */
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Glow effect */
-  max-width: 80%;
+  max-width: 90%; /* Increased to accommodate longer messages */
   padding: 20px;
   font-family: 'Courier New', Courier, monospace; /* Monospaced font for terminal look */
-  margin-bottom: 80px; /* Added space for buttons */
+  margin-bottom: 60px; /* Space for the button */
+  text-align: center; /* Center align the text */
+  position: relative; /* For positioning the button-container */
 }
 
 .typing-animation {
   font-size: 1.5rem; /* Adjusted font size to fit terminal style */
   margin-bottom: 20px;
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 0.15em solid #00ff00; /* Cursor effect */
-  animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+  white-space: pre-wrap; /* Allow text to wrap, respecting newlines */
+  display: inline; /* Ensure text appears inline */
 }
 
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
+.blinking-cursor {
+  display: inline-block;
+  border-right: 0.15em solid #00ff00; /* Blinking cursor style */
+  animation: blink-caret 0.75s step-end infinite;
 }
 
 @keyframes blink-caret {
@@ -45,11 +44,11 @@
 .button-container {
   display: flex;
   justify-content: center;
-  gap: 10px; /* Space between buttons */
-  position: absolute; /* Absolute positioning for precise placement */
-  bottom: 20px; /* Distance from bottom of the page */
+  width: 100%; /* Ensure it takes full width */
+  position: fixed; /* Position fixed to keep it at the bottom of the viewport */
+  bottom: 20px; /* Distance from the bottom of the viewport */
   left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Adjust for centering */
+  transform: translateX(-50%); /* Center the button */
 }
 
 .button-container button {

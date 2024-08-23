@@ -43,15 +43,15 @@ function App() {
       const mood = getMostFrequentMood();
       switch (mood) {
         case 'happy':
-          return "You've been feeling happy today! Keep up the positive vibes and spread joy to others.";
+          return "It looks like you’ve felt happy today! That’s wonderful—hold on to that good energy and let it brighten not just your day, but someone else’s too.";
         case 'sad':
-          return "You've been feeling sad today. It's okay to feel down; take some time to care for yourself.";
+          return "You’ve been feeling sad today, and that’s okay. It’s important to give yourself the time and space to feel this. Be gentle with yourself—you deserve care.";
         case 'angry':
-          return "You've been feeling angry today. Try to find a way to release that anger constructively.";
+          return "You’ve felt angry today. That’s a valid emotion. Try to release it in a way that feels healthy for you, whether that’s through movement, talking, or reflection.";
         case 'relaxed':
-          return "You've been feeling relaxed today. Keep enjoying the calm and peace!";
+          return "You’ve had a calm and relaxing day. Enjoy that peaceful feeling, and remember it’s okay to soak in these quiet moments.";
         default:
-          return "You've had a mix of emotions today. Remember, it's important to acknowledge and process how you feel.";
+          return "Today brought a mix of emotions, which is completely natural. Make sure to recognize each feeling without judgment, and give yourself permission to process them as they come.";
       }
     };
   

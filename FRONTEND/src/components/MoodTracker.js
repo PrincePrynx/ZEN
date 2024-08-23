@@ -18,7 +18,7 @@ function MoodTracker({ addPlant, moodCount }) {
             case 'sad':
                 return 'lightblue';
             case 'angry':
-                return 'lightcoral';
+                return 'crimson';
             case 'relaxed':
                 return 'lightyellow';
             default:
@@ -33,10 +33,30 @@ function MoodTracker({ addPlant, moodCount }) {
             <h1>MOOD TRACKER</h1>
             <p>How are you feeling at the moment?</p>
             <div className="mood-options">
-                <button onClick={() => handleMoodSelect('happy', '🌻')}>Happy</button>
-                <button onClick={() => handleMoodSelect('sad', '🌵')}>Sad</button>
-                <button onClick={() => handleMoodSelect('angry', '🌺')}>Angry</button>
-                <button onClick={() => handleMoodSelect('relaxed', '🍀')}>Relaxed</button>
+                <button
+                    onClick={() => handleMoodSelect('happy', '🌻')}
+                    aria-label="Happy"
+                >
+                    Happy
+                </button>
+                <button
+                    onClick={() => handleMoodSelect('sad', '🌵')}
+                    aria-label="Sad"
+                >
+                    Sad
+                </button>
+                <button
+                    onClick={() => handleMoodSelect('angry', '🌺')}
+                    aria-label="Angry"
+                >
+                    Angry
+                </button>
+                <button
+                    onClick={() => handleMoodSelect('relaxed', '🍀')}
+                    aria-label="Relaxed"
+                >
+                    Relaxed
+                </button>
             </div>
             <div className="view-garden">
                 <button 

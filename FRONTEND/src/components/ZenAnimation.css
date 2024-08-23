@@ -7,6 +7,7 @@
   height: 100vh;
   background-color: #55996f;
   position: relative;
+  padding: 20px; /* Added padding for smaller screens */
 }
 
 /* Circle background with reduced opacity */
@@ -41,6 +42,7 @@
   bottom: 50px;
   display: flex;
   gap: 5px;
+  flex-direction: row; /* Ensure horizontal alignment */
 }
 
 .word {
@@ -89,5 +91,47 @@
   }
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .circle {
+    width: 300px;
+    height: 300px;
+  }
 
+  .letter {
+    font-size: 200px;
+  }
 
+  .slogan {
+    bottom: 30px;
+    flex-direction: row; /* Keep horizontal alignment */
+    gap: 3px;
+  }
+
+  .word {
+    font-size: 16px;
+    transform: translateY(70px);
+  }
+}
+
+@media (max-width: 480px) {
+  .circle {
+    width: 200px;
+    height: 200px;
+  }
+
+  .letter {
+    font-size: 150px;
+  }
+
+  .slogan {
+    bottom: 20px;
+    flex-direction: row; /* Keep horizontal alignment */
+    gap: 2px;
+  }
+
+  .word {
+    font-size: 14px;
+    transform: translateY(50px);
+  }
+}

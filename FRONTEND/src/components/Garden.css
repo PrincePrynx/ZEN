@@ -1,26 +1,22 @@
 .garden {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  justify-items: center;
   align-items: center;
-  justify-content: center;
   height: 100vh;
   background-color: #faf8eb;
   position: relative;
 }
 
 .garden-plants-container {
-  position: relative;
-  /* width: 300px;
-  height: 300px; */
-  margin: 0 auto;
+  position: relative; 
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
-  width: 80%;
+  width: 20%;
   max-width: 600px;
-  height: 80%;
+  height: 40%;
   max-height: 600px;
 }
 
@@ -53,13 +49,14 @@
   padding: 5px;
   position: absolute;
   z-index: 1;
-  width: 80px;
+  width: 100px;
   bottom: 125%; /* Position above the plant */
   left: 50%;
-  margin-left: -40px; /* Center the tooltip */
+  margin-left: -50px; /* Center the tooltip */
   transform: translateY(0);
   transition: opacity 0.3s ease, transform 0.3s ease;
-  font-size: 10px;
+  font-size: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Added shadow */
 }
 
 .tooltip::after {
@@ -77,8 +74,8 @@
   font-family: 'Courier New', Courier, monospace;
   font-size: 1.5em;
   color: #333;
-  margin-top: 200px;
   text-align: center;
+  margin-bottom: 20px; /* Adjust the margin as needed */
 }
 
 .garden-mood-header {
@@ -87,6 +84,7 @@
   text-decoration: none;
   color: #333;
 }
+
 .garden-link {
   font-family: monospace;
   margin-top: 20px;
@@ -106,5 +104,10 @@
 
   .garden-plant {
     font-size: 30px;
+  }
+
+  .tooltip {
+    width: 80px; /* Adjust tooltip width for smaller screens */
+    font-size: 10px;
   }
 }

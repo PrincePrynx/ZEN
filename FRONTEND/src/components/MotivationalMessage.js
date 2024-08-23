@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './MotivationalMessage.css';
 
@@ -27,25 +27,50 @@ const messages = [
   "Your courage is not in never feeling pain, but in continuing despite it. You are braver than you realize."
 ];
 
-
 function getRandomMessage() {
   return messages[Math.floor(Math.random() * messages.length)];
 }
 
 function MotivationalMessage() {
+  const [displayedText, setDisplayedText] = useState('');
+  const [message, setMessage] = useState('');
   const navigate = useNavigate();
-  const message = getRandomMessage();
+
+  useEffect(() => {
+    // Set a new random message
+    const newMessage = getRandomMessage();
+    setMessage(newMessage);
+    setDisplayedText(''); // Clear displayed text on message change
+
+    let index = 0;
+    const typingInterval = setInterval(() => {
+      setDisplayedText(prev => {
+        // Make sure prev is not undefined
+        const text = prev || '';
+        if (index < newMessage.length) {
+          return text + newMessage[index];
+        }
+        return text;
+      });
+      index++;
+      if (index >= newMessage.length) {
+        clearInterval(typingInterval);
+      }
+    }, 50); // Adjust typing speed here
+
+    return () => clearInterval(typingInterval);
+  }, [message]);
 
   return (
     <div className="motivational-message-container">
       <div className="motivational-message">
         <div className="typing-animation">
-          {message}
+          {displayedText}
+          <span className="blinking-cursor"></span> {/* Blinking cursor */}
         </div>
-        <div className="button-container">
-          {/* <button onClick={() => navigate('/')}>Home</button> */}
-          <button onClick={() => navigate('/thoughts-backlog')}>View Backlog</button>
-        </div>
+      </div>
+      <div className="button-container">
+        <button onClick={() => navigate('/thoughts-backlog')}>View Backlog</button>
       </div>
     </div>
   );

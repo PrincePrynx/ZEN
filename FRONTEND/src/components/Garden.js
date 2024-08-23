@@ -1,9 +1,10 @@
+
 import React from 'react';
 import './Garden.css';
 
 function Garden({ plants, moodMessage }) {
     const radius = 120;
-    const angleStep = (2 * Math.PI) / plants.length;
+    const angleStep = plants.length > 0 ? (2 * Math.PI) / plants.length : 0;
 
     const emotions = {
         '🌻': 'Happy',
@@ -22,17 +23,20 @@ function Garden({ plants, moodMessage }) {
     return (
         <div className="garden">
             <div className="garden-plants-container">
-                {plants.map((plant, index) => (
-                    <span
-                        key={index}
-                        className="garden-plant"
-                        style={calculatePosition(index)}
-                    >
-                        {plant}
-                        <div className="tooltip">{emotions[plant]}</div>
-                    </span>
-                ))}
-                {/* <h1 className= "garden-mood-header">Your Garden</h1> */}
+                {plants.length > 0 ? (
+                    plants.map((plant, index) => (
+                        <span
+                            key={index}
+                            className="garden-plant"
+                            style={calculatePosition(index)}
+                        >
+                            {plant}
+                            <div className="tooltip">{emotions[plant]}</div>
+                        </span>
+                    ))
+                ) : (
+                    <p>No plants to display</p>
+                )}
             </div>
             <p className="garden-mood-message">{moodMessage}</p>
             <p>
